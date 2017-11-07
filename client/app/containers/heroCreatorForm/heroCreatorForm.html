@@ -1,0 +1,42 @@
+<form name="heroFormCreate" class="form-horizontal" role="form" ng-submit="vm.addHero()" novalidate>
+
+    <div class="form-group" ng-class="{'has-error': heroFormCreate.name.$invalid && !heroFormCreate.name.$pristine}">
+        <label class="control-label col-sm-2">Name:</label>
+        <div class="col-sm-10">
+            <input type="text" name="name" class="form-control" placeholder="Enter name" ng-model="vm.hero.name" required>
+            <p ng-show='(heroFormCreate.name.$invalid && !heroFormCreate.name.$pristine)' class='help-block'>The name field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error': heroFormCreate.age.$invalid && !heroFormCreate.age.$pristine}">
+        <label class="control-label col-sm-2">Age:</label>
+        <div class="col-sm-10">
+            <input type="text" name="age" class="form-control" placeholder="Enter your age" ng-model="vm.hero.age" required>
+            <p ng-show='(heroFormCreate.age.$invalid && !heroFormCreate.age.$pristine)' class='help-block'>The age field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error': heroFormCreate.photo.$invalid && !heroFormCreate.photo.$pristine}">
+        <label class="control-label col-sm-2">Photo:</label>
+        <div class="col-sm-10">
+            <input type="text" name="photo" class="form-control" placeholder="Enter photo URL:" ng-model="vm.hero.photo" required>
+            <p class='form-group_msg'>The image size is width: 300px &amp; height: 300px</p>
+            <p ng-show='(heroFormCreate.photo.$invalid && !heroFormCreate.photo.$pristine)' class='help-block'>The photo field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group" ng-class="{'has-error': heroFormCreate.about.$invalid && !heroFormCreate.about.$pristine}">
+        <label class="control-label col-sm-2">About:</label>
+        <div class="col-sm-10">
+            <textarea type="text" name="about" class="form-control" cols="30" rows="10" ng-model="vm.hero.about" required></textarea>
+            <p ng-show='(heroFormCreate.about.$invalid && !heroFormCreate.about.$pristine)' class='help-block'>The about field is required</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" ng-disabled='heroFormCreate.$invalid'>Submit</button>
+        </div>
+    </div>
+
+</form>

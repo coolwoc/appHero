@@ -1,0 +1,25 @@
+/* Layout for sticky footer */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+  margin-bottom: 60px; /* Margin bottom by footer height */
+}
+
+/* Components */
+/* navigation.html */
+.navbar {
+    margin-bottom: 0;
+}
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+}
+
+/*pages*/
+/* home */
+.jumbotron {
+    background-color: #ffffff;
+}
